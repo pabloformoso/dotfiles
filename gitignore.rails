@@ -1,0 +1,9 @@
+.DS_Store 
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+db/schema.rb
+config/database.yml
+nbproject/**
+nbproject/
