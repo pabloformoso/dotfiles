@@ -14,15 +14,6 @@
 #
 # takes you to $HOME/prj/rails from anywhere.
 GO_SHORTCUTS=(
-	softwhisper
-	/Volumes/Proyectos/SoftWhisper/Desarrollos/CorpSoftwhisper
-	
-	lavoz
-	/Volumes/Proyectos/OceanoGrafico/La\ Voz/Dev/LaVoz	
-	
-	vandal
-	/Users/pablo/Proyectos/Vandal/iPad/Dev/Vandal\ iPad
-	
 )
 
 function go {
