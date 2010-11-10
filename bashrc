@@ -13,6 +13,8 @@
 #   go rails
 #
 # takes you to $HOME/prj/rails from anywhere.
+#
+# Created by Xavier Noria - @fxn
 GO_SHORTCUTS=(
 )
 
@@ -35,6 +37,8 @@ function go {
 #    fxn@halmos:~/tmp/ruby-1.9.2-p0$
 #
 # Accepts tar.gz, tar.bz2, and zip.
+#
+# Created by Xavier Noria - @fxn
 function xcd {
     local tarball=$1
     if [[ "$tarball" == *.tar.gz ]]; then
@@ -49,6 +53,8 @@ function xcd {
 }
 
 # If the cwd is a git repo, put the branch in the prompt.
+#
+# Created by Xavier Noria - @fxn
 export PS1='\u@\h:\W`git_branch` $ '
 function git_branch {
     local branch=`git branch 2>/dev/null | cut -f2 -d\* -s | sed "s/^ //"`
@@ -59,9 +65,8 @@ function git_branch {
     fi
 }
 
-#
-# --- Rails commands ----------------------------------------------------------
-#
+
+# Rails Aliases
 alias rgs='rails generate scaffold'
 alias rgc='rails generate controller'
 alias rs='rails server'
@@ -75,20 +80,26 @@ alias rs='rails server'
 #   3. Defaults to 'development'
 #
 # Thanks to pgas in #bash for the idiom to chain the defaults.
+#
+# Created by Xavier Noria - @fxn
 function rl {
     tail -f log/${1-${RAILS_ENV-development}}.log
 }
 
 # Reboots Passenger.
+#
 alias rb='touch tmp/restart.txt'
 
 # Git aliases
+#
 alias gr='git reset --hard HEAD^'
 alias gc='git commit -m'
 alias ga='git add .'
 alias gp='git push origin master'
 
-#Proyect Caampus Ester
+# Proyect Caampus Ester
+# Example of a tail through ssh
+#
 alias tail_campus_pro='ssh pformoso@persei.customer.attikh.net tail -n 2000 -f /var/www/rails/campus.persei.eu/current/log/production.log'
 alias ssh_persei_pro='ssh pformoso@persei.customer.attikh.net'
 
